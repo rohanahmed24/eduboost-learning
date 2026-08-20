@@ -6,9 +6,9 @@
 
 Thoughtful course discovery, human-led learning, and a calm interface designed to make progress feel possible.
 
-[View the code](https://github.com/rohanahmed24/eduboost-dash-learning/tree/main) · [Run it locally](#run-locally) · [Explore the product tour](#product-tour)
+[View the code](https://github.com/rohanahmed24/eduboost-learning/tree/main) · [Run it locally](#run-locally) · [Explore the product tour](#product-tour)
 
-![CI](https://github.com/rohanahmed24/eduboost-dash-learning/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/rohanahmed24/eduboost-learning/actions/workflows/ci.yml/badge.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-16-111111?logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![Responsive](https://img.shields.io/badge/UI-responsive-F4512C)
