@@ -107,7 +107,7 @@ export default function FooterSection() {
                 data-node-id="65:79337"
               >
                 <a
-                  href="https://github.com/rohanahmed24/eduboost-web"
+                  href="https://github.com/rohanahmed24/eduboost-dash-learning"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors"
