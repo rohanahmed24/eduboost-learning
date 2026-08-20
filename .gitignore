@@ -121,3 +121,6 @@ next-dev*.log
 server.log
 dev-output.log
 nextjs.pid
+
+# Local Netlify folder
+.netlify
