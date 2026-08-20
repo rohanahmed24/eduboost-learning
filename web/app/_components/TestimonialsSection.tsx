@@ -112,6 +112,12 @@ function chunk<T>(arr: T[], size: number): T[][] {
   return out;
 }
 
+function getPerView(width: number) {
+  if (width >= 1280) return 4;
+  if (width >= 640) return 2;
+  return 1;
+}
+
 /** Shared 48×48 circle; fixed size avoids pill-style stretch from padding. */
 const navCircleBtn =
   "inline-flex size-12 shrink-0 items-center justify-center rounded-full p-0 outline-none transition-colors duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:cursor-not-allowed disabled:opacity-35";
@@ -175,11 +181,7 @@ export default function TestimonialsSection() {
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  const perView = useMemo(() => {
-    if (viewportWidth >= 1280) return 4;
-    if (viewportWidth >= 640) return 2;
-    return 1;
-  }, [viewportWidth]);
+  const perView = useMemo(() => getPerView(viewportWidth), [viewportWidth]);
 
   const pages = useMemo(
     () => chunk(TESTIMONIALS, perView),
@@ -191,13 +193,22 @@ export default function TestimonialsSection() {
   useLayoutEffect(() => {
     const el = viewportRef.current;
     if (!el) return;
+
+    const updateViewportWidth = (width: number) => {
+      if (getPerView(width) !== perView) {
+        setPage(0);
+        setDirection(0);
+      }
+      setViewportWidth(width);
+    };
+
     const ro = new ResizeObserver(([entry]) => {
-      setViewportWidth(entry.contentRect.width);
+      updateViewportWidth(entry.contentRect.width);
     });
     ro.observe(el);
-    setViewportWidth(el.getBoundingClientRect().width);
+    updateViewportWidth(el.getBoundingClientRect().width);
     return () => ro.disconnect();
-  }, []);
+  }, [perView]);
 
   const safePage = numPages > 0 ? Math.min(page, numPages - 1) : 0;
   const visibleChunk = pages[safePage] ?? [];
@@ -250,38 +261,29 @@ export default function TestimonialsSection() {
   const slideVariants = useMemo(
     () => ({
       enter: (dir: number) => ({
-        x: dir > 0 ? 72 : -72,
+        x: dir > 0 ? 48 : -48,
         opacity: 0,
-        filter: reduceMotion ? "blur(0px)" : "blur(10px)",
       }),
       center: {
         x: 0,
         opacity: 1,
-        filter: "blur(0px)",
       },
       exit: (dir: number) => ({
-        x: dir < 0 ? 72 : -72,
+        x: dir < 0 ? 48 : -48,
         opacity: 0,
-        filter: reduceMotion ? "blur(0px)" : "blur(10px)",
       }),
     }),
-    [reduceMotion],
+    [],
   );
 
-  const springTransition = reduceMotion
-    ? { duration: 0.22, ease: [0.22, 1, 0.36, 1] as const }
-    : {
-        type: "spring" as const,
-        stiffness: 72,
-        damping: 22,
-        mass: 0.92,
-        restDelta: 0.008,
-      };
+  const slideTransition = reduceMotion
+    ? { duration: 0.16, ease: [0.22, 1, 0.36, 1] as const }
+    : { type: "tween" as const, duration: 0.32, ease: [0.22, 1, 0.36, 1] as const };
 
   const navDisabled = numPages < 2;
 
   return (
-    <section className="w-full bg-black" data-node-id="65:79159">
+    <section id="testimonials" className="w-full bg-black scroll-mt-28" data-node-id="65:79159">
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-[clamp(1rem,4vw,3.75rem)] py-12 md:gap-[60px] lg:py-[clamp(3rem,10vw,10rem)]">
         <Reveal
           className="relative flex w-full shrink-0 flex-col items-start justify-between gap-5 lg:flex-row lg:items-start lg:gap-8"
@@ -394,7 +396,7 @@ export default function TestimonialsSection() {
           }
           data-node-id="65:79174"
         >
-          <AnimatePresence initial={false} custom={direction} mode="wait">
+          <AnimatePresence initial={false} custom={direction} mode="sync">
             <motion.div
               ref={slideRef}
               key={`${safePage}-${perView}`}
@@ -406,16 +408,17 @@ export default function TestimonialsSection() {
               initial="enter"
               animate="center"
               exit="exit"
-              transition={springTransition}
+              transition={slideTransition}
               className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-4"
               drag={navDisabled ? false : "x"}
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={0.12}
+              dragMomentum={false}
               onPanEnd={(_, info) => {
-                const t = 36;
-                if (info.offset.x < -t || info.velocity.x < -120) {
+                const t = 48;
+                if (info.offset.x < -t) {
                   goNext();
-                } else if (info.offset.x > t || info.velocity.x > 120) {
+                } else if (info.offset.x > t) {
                   goPrev();
                 }
               }}

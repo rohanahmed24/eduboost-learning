@@ -80,7 +80,6 @@ export default function TeacherDetailHero({ teacher }: Props) {
         <div className="flex shrink-0 gap-[2px] items-center">
           {[0, 1, 2, 3, 4].map((i) => (
             <img
-              // eslint-disable-next-line react/no-array-index-key
               key={i}
               src={i < 3 ? imgStarPrimary : imgStarSecondary}
               className="size-[24px]"

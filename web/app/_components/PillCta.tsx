@@ -11,6 +11,7 @@ export type PillCtaProps = {
   iconSizeClass?: string;
   href?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
+  type?: "button" | "submit" | "reset";
   disabled?: boolean;
   /** Required when there is no `label` (icon-only). */
   "aria-label"?: string;
@@ -30,6 +31,7 @@ export function PillCta({
   iconSizeClass = "size-6",
   href,
   onClick,
+  type = "button",
   disabled = false,
   "aria-label": ariaLabelProp,
   "data-node-id": dataNodeId,
@@ -103,7 +105,7 @@ export function PillCta({
 
   return (
     <button
-      type="button"
+      type={type}
       className={mergedClass}
       aria-label={a11yName}
       data-node-id={dataNodeId}

@@ -121,9 +121,8 @@ export function HeroSection() {
                     className="w-full max-w-[480px] font-['PP_Neue_Montreal',sans-serif] text-[18px] leading-6 tracking-[-0.36px] text-[#262626] font-normal"
                     data-node-id="65:79374"
                   >
-                    Explore a wide range of expert-led courses, learn at your
-                    own pace, and gain the skills you need to succeed in your
-                    career and life with expert-led courses.
+                    Explore expert-led courses, learn at your own pace, and gain
+                    practical skills for your career and life.
                   </p>
 
                 <div
@@ -133,6 +132,7 @@ export function HeroSection() {
                   <PillCta
                     className="pill-cta-primary flex w-full items-center justify-center gap-1 rounded-[100px] bg-[#f30] px-6 py-3 lg:w-[192px] lg:px-6 lg:py-3"
                     label="Explore Courses"
+                    href="/courses"
                     labelClassName="font-['PP_Neue_Montreal',sans-serif] text-[16px] leading-6 text-white font-medium"
                     iconSrc={imgArrowUpRightHero01}
                     iconSizeClass="size-6"
@@ -140,6 +140,7 @@ export function HeroSection() {
                   <PillCta
                     className="pill-cta-outline flex w-full items-center justify-center rounded-[100px] border border-black border-solid px-6 py-3 lg:w-[140px] lg:px-6 lg:py-3"
                     label="Get Started"
+                    href="/#pricing"
                     labelClassName="font-['PP_Neue_Montreal',sans-serif] text-[16px] leading-6 text-inherit whitespace-nowrap font-medium"
                   />
                 </div>

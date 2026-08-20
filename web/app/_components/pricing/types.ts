@@ -4,6 +4,7 @@ export type PricingCtaConfig = {
   variant: "primary" | "surface";
   /** Tailwind gap between label and icon, e.g. `gap-1`, `gap-2` */
   gapClass: string;
+  href: string;
 };
 
 export type PricingPlanDefinition = {

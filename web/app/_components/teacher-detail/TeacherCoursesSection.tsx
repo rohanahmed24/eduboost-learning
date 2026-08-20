@@ -29,7 +29,7 @@ export default function TeacherCoursesSection({ courseSlugs, teacherName }: Prop
           </div>
           
           <h2 className="text-[32px] lg:text-[40px] leading-[1.1] tracking-[-0.01em] font-['PP_Neue_Montreal:Medium',sans-serif] text-black">
-            Discover handpicked courses curated by experts to help you learn practical skills and grow confidently in your career our most popular courses.
+            Discover handpicked courses curated by experts to help you learn practical skills and grow confidently in your career.
           </h2>
         </Reveal>
 

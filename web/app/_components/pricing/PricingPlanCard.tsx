@@ -26,6 +26,7 @@ export function PricingPlanCard({ plan }: PricingPlanCardProps) {
       )}
       iconSrc={iconSrc}
       iconSizeClass="size-[24px]"
+      href={plan.cta.href}
       data-node-id={plan.cta.nodeId}
     />
   );

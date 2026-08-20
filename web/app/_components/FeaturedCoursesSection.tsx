@@ -61,7 +61,7 @@ export default function FeaturedCoursesSection({
                 },
                 {
                   variant: "muted",
-                  text: "skills and grow confidently in your career our most popular courses.",
+                  text: "skills and grow confidently in your career.",
                 },
               ]}
             />
@@ -70,6 +70,7 @@ export default function FeaturedCoursesSection({
             <PillCta
               className="pill-cta-primary relative flex shrink-0 items-center gap-[4px] bg-[#f30] px-[24px] py-[12px] rounded-[100px]"
               label={ctaLabel}
+              href="/courses"
               labelClassName="font-['PP_Neue_Montreal',sans-serif] font-medium text-[16px] leading-[24px] not-italic text-white whitespace-nowrap"
               iconSrc={imgArrowUpRight01}
               iconSizeClass="size-[24px]"
@@ -87,7 +88,7 @@ export default function FeaturedCoursesSection({
             <CourseCard
               key={course.slug}
               course={course}
-              className="relative flex w-full min-w-0 shrink-0 flex-col overflow-hidden rounded-2xl bg-[#f1f1f1] p-6 max-lg:flex-none lg:flex-1 lg:basis-0"
+              className="max-lg:flex-none lg:flex-1 lg:basis-0"
             />
           ))}
         </RevealStagger>

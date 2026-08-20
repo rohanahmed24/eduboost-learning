@@ -10,7 +10,7 @@ const imgUnion =
 
 export default function PricingSection() {
   return (
-    <section className="w-full bg-white" data-node-id="65:79026">
+    <section id="pricing" className="w-full bg-white scroll-mt-28" data-node-id="65:79026">
       <div className="relative mx-auto flex w-full min-w-0 max-w-[1440px] flex-col gap-12 px-[clamp(1rem,4vw,3.75rem)] pb-[clamp(3rem,10vw,10rem)] pt-[clamp(2.5rem,8vw,7.5rem)] md:gap-[60px]">
         <Reveal
           className="relative flex w-full shrink-0 flex-col items-start justify-between gap-8 lg:flex-row lg:items-start"
@@ -37,7 +37,7 @@ export default function PricingSection() {
               className="font-['PP_Neue_Montreal',sans-serif] font-medium leading-[24px] not-italic relative shrink-0 text-[18px] text-black tracking-[-0.18px] whitespace-nowrap"
               data-node-id="65:79031"
             >
-              Choose Perfect Price
+              Choose Your Plan
             </p>
           </div>
           <div

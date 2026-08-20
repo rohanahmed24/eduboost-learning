@@ -133,7 +133,8 @@ export default function OurAllCoursesSection({
           </div>
           <PillCta
             className="pill-cta-primary relative flex shrink-0 items-center gap-[4px] bg-[#f30] px-[24px] py-[12px] rounded-[100px]"
-            label="Explore Course "
+            label="Explore Courses"
+            href="/courses"
             labelClassName="font-['PP_Neue_Montreal',sans-serif] font-medium font-medium text-[16px] leading-[24px] not-italic text-white whitespace-nowrap"
             iconSrc={imgArrowUpRight01}
             iconSizeClass="size-[24px]"

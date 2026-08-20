@@ -60,7 +60,7 @@ export function AboutHeroSection() {
                 segments={[
                   {
                     variant: "primary",
-                    text: "We are a learning-driven platform committed to empowering individuals with practical skills, industry-focused knowledge, and expert-led courses inspire confidence, unlock career opportunities",
+                    text: "We are a learning-driven platform committed to empowering individuals with practical skills, industry-focused knowledge, and expert-led courses that inspire confidence and unlock career opportunities.",
                   },
                 ]}
               />

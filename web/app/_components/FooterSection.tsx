@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { Reveal } from "./motion/Reveal";
 import { ebAsset } from "@/app/_lib/eb-asset";
-import { PillCta } from "./PillCta";
+import { NewsletterForm } from "./NewsletterForm";
 
-const imgArrowUpRight01 =
-  ebAsset("fd003dad-abd0-490d-9b6f-f2affd45e218");
 const imgLine2 =
   ebAsset("d9653087-5607-42bc-8e41-1fe01feaeca6");
 
@@ -50,14 +48,14 @@ export default function FooterSection() {
                 <Link href="/about" className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors">
                   <p className="leading-[24px]">About us</p>
                 </Link>
-                <Link href="/testimonials" className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors">
+                <Link href="/#testimonials" className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors">
                   <p className="leading-[24px]">Testimonials</p>
                 </Link>
-                <Link href="/blog" className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors">
-                  <p className="leading-[24px]">Blog</p>
+                <Link href="/teachers" className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors">
+                  <p className="leading-[24px]">Teachers</p>
                 </Link>
-                <Link href="/contact" className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors">
-                  <p className="leading-[24px]">Contact Us</p>
+                <Link href="/#faq" className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors">
+                  <p className="leading-[24px]">FAQ</p>
                 </Link>
               </div>
             </div>
@@ -76,23 +74,20 @@ export default function FooterSection() {
                 className="content-stretch flex flex-col font-['PP_Neue_Montreal',sans-serif] font-normal gap-[16px] items-start relative shrink-0 text-[16px] tracking-[-0.16px] w-full"
                 data-node-id="65:79328"
               >
-                <Link href="/help" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79329">
-                  <p className="leading-[24px]">Help Center</p>
+                <Link href="/courses#courses" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79329">
+                  <p className="leading-[24px]">Course catalog</p>
                 </Link>
-                <Link href="/terms" className="flex flex-col justify-end relative shrink-0 whitespace-nowrap hover:text-white/70 transition-colors" data-node-id="65:79330">
-                  <p className="leading-[24px]">Terms of Service</p>
+                <Link href="/#pricing" className="flex flex-col justify-end relative shrink-0 whitespace-nowrap hover:text-white/70 transition-colors" data-node-id="65:79330">
+                  <p className="leading-[24px]">Pricing</p>
                 </Link>
-                <Link href="/privacy" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79331">
-                  <p className="leading-[24px]">Privacy Policy</p>
+                <Link href="/#faq" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79331">
+                  <p className="leading-[24px]">Learning FAQ</p>
                 </Link>
-                <Link href="/faq" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79332">
-                  <p className="leading-[24px]">FAQ</p>
+                <Link href="/about" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79332">
+                  <p className="leading-[24px]">About EduBoost</p>
                 </Link>
-                <Link href="/refund" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79333">
-                  <p className="leading-[24px]">Refund Policy</p>
-                </Link>
-                <Link href="/support" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79334">
-                  <p className="leading-[24px]">Technical Support</p>
+                <Link href="/teachers" className="flex flex-col justify-end min-w-full relative shrink-0 w-[min-content] hover:text-white/70 transition-colors" data-node-id="65:79334">
+                  <p className="leading-[24px]">Meet the teachers</p>
                 </Link>
               </div>
             </div>
@@ -112,16 +107,16 @@ export default function FooterSection() {
                 data-node-id="65:79337"
               >
                 <a
-                  href="https://facebook.com"
+                  href="https://github.com/rohanahmed24/eduboost-web"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors"
                   data-node-id="65:79338"
                 >
-                  <p className="leading-[24px]">Facebook</p>
+                  <p className="leading-[24px]">GitHub</p>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/ahmedrohan/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors"
@@ -130,40 +125,40 @@ export default function FooterSection() {
                   <p className="leading-[24px]">LinkedIn</p>
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://eduboost-dev.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors"
                   data-node-id="65:79340"
                 >
-                  <p className="leading-[24px]">Twitter</p>
+                  <p className="leading-[24px]">Live demo</p>
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="/#courses"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors"
                   data-node-id="65:79341"
                 >
-                  <p className="leading-[24px]">Instagram</p>
+                  <p className="leading-[24px]">Course catalog</p>
                 </a>
                 <a
-                  href="https://youtube.com"
+                  href="/#testimonials"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors"
                   data-node-id="65:79342"
                 >
-                  <p className="leading-[24px]">YouTube</p>
+                  <p className="leading-[24px]">Student stories</p>
                 </a>
                 <a
-                  href="https://telegram.org"
+                  href="/#faq"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col justify-end relative shrink-0 w-full hover:text-white/70 transition-colors"
                   data-node-id="65:79343"
                 >
-                  <p className="leading-[24px]">Telegram</p>
+                  <p className="leading-[24px]">FAQ</p>
                 </a>
               </div>
             </div>
@@ -183,7 +178,7 @@ export default function FooterSection() {
               >
                 <p className="leading-[40px]">
                   Join our newsletter for updates, tips, and new courses
-                  delivered your inbox.
+                  delivered to your inbox.
                 </p>
               </div>
               <div
@@ -193,20 +188,12 @@ export default function FooterSection() {
                 <p className="leading-[24px]">
                   EduBoost offers expert-led courses, flexible learning paths,
                   and practical skills to help learners grow confidently, advance
-                  careers, and achieve real-world success effectively and
-                  efficiently.
+                  their careers, and achieve real-world success.
                 </p>
               </div>
             </div>
 
-            <PillCta
-              className="pill-cta-primary relative flex shrink-0 items-center gap-[4px] bg-[#f30] px-[24px] py-[12px] rounded-[100px]"
-              label="Join With Us Now"
-              labelClassName="font-['PP_Neue_Montreal',sans-serif] font-medium text-[16px] leading-[24px] not-italic text-white whitespace-nowrap"
-              iconSrc={imgArrowUpRight01}
-              iconSizeClass="size-[24px]"
-              data-node-id="65:79348"
-            />
+            <NewsletterForm />
           </div>
         </div>
 
@@ -233,7 +220,7 @@ export default function FooterSection() {
               className="flex flex-col font-['PP_Neue_Montreal',sans-serif] font-normal justify-end leading-[0] relative shrink-0 text-[16px] tracking-[-0.16px]"
               data-node-id="65:79356"
             >
-              <p className="leading-[24px]">© 2025 Superplan. All rights reserved.</p>
+              <p className="leading-[24px]">© 2026 EduBoost. Demo project.</p>
             </div>
           </div>
         </div>

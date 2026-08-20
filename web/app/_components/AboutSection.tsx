@@ -134,7 +134,8 @@ export function AboutSection() {
 
               <PillCta
                 className="pill-cta-primary flex w-fit items-center gap-1 rounded-[100px] bg-[#f30] px-6 py-3"
-                label="Learn About more"
+                label="Learn More"
+                href="/about"
                 labelClassName="font-['PP_Neue_Montreal',sans-serif] font-medium text-[16px] leading-6 text-white lg:text-[15px] xl:text-[16px]"
                 iconSrc={imgArrowUpRightAbout01}
                 iconSizeClass="size-6"

@@ -119,7 +119,7 @@ export function TeachersSection({
 }: {
   limit?: number;
   hideCta?: boolean;
-  /** When true, all photo cards render at the same tall height (matches the full /teachers page Figma grid). */
+  /** When true, all photo cards use one consistent portrait ratio (matches the full /teachers page grid). */
   uniformHeight?: boolean;
 }) {
   const displayTeachers = TEACHERS_DATA.slice(0, limit);
@@ -177,10 +177,10 @@ export function TeachersSection({
                     variant: "primary",
                     text: "Meet our expert educators who guide, inspire, and support learners to gain practical ",
                   },
-                  {
-                    variant: "muted",
-                    text: "skills and succeed in their careers growing",
-                  },
+                {
+                  variant: "muted",
+                  text: "skills and succeed in their careers.",
+                },
                 ]}
               />
             </div>
@@ -189,6 +189,7 @@ export function TeachersSection({
               <PillCta
                 className="pill-cta-primary relative flex shrink-0 items-center gap-[4px] bg-[#f30] px-[24px] py-[12px] rounded-[100px]"
                 label="View all Teachers"
+                href="/teachers"
                 labelClassName="font-['PP_Neue_Montreal',sans-serif] font-medium text-[16px] leading-[24px] not-italic text-white whitespace-nowrap"
                 iconSrc={imgArrowUpRight01}
                 iconSizeClass="size-[24px]"
@@ -210,9 +211,9 @@ export function TeachersSection({
             >
               <div
                 className={[
-                  "group relative w-full shrink-0 overflow-hidden rounded-2xl transition-[height] duration-500 ease-out",
+                  "group relative w-full shrink-0 overflow-hidden rounded-2xl transition-[height,transform] duration-500 ease-out",
                   uniformHeight
-                    ? "h-[320px] sm:h-[400px] xl:h-[var(--teacher-h)] xl:hover:h-[var(--teacher-h-hover)]"
+                    ? "aspect-[1432/1520]"
                     : "h-[320px] sm:h-[360px] xl:h-[var(--teacher-h)] xl:hover:h-[var(--teacher-h-hover)]",
                 ].join(" ")}
                 style={

@@ -109,6 +109,7 @@ export default function CourseDetailHero({ course }: { course: CourseData }) {
                 <PillCta
                   className="pill-cta-primary flex w-full items-center justify-center gap-2 rounded-[100px] bg-[#f30] px-6 py-3"
                   label="Buy Course"
+                  href="/#pricing"
                   labelClassName="font-['PP_Neue_Montreal:Medium',sans-serif] text-[16px] leading-6 not-italic text-white"
                   iconSrc={imgArrowUpRight}
                   iconSizeClass="size-[24px]"
@@ -117,6 +118,7 @@ export default function CourseDetailHero({ course }: { course: CourseData }) {
                 <PillCta
                   className="pill-cta-ghost flex w-full items-center justify-center gap-2 rounded-[100px] bg-[#f1f1f1] px-6 py-3"
                   label="Get All Courses"
+                  href="/courses"
                   labelClassName="font-['PP_Neue_Montreal:Book',sans-serif] text-[16px] leading-6 not-italic text-black"
                   data-node-id="65:82037"
                 />

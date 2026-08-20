@@ -5,7 +5,6 @@ import { ebAsset } from "@/app/_lib/eb-asset";
 
 const imgUnion =
   ebAsset("16fdb56d-31eb-4cf4-8ad5-8864398f25dc");
-const imgAdd01 = ebAsset("a8d87765-6455-4b3b-8d16-e4467c897c09");
 
 export function WhyEduBoostSection() {
   return (
@@ -90,8 +89,7 @@ export function WhyEduBoostSection() {
                 data-node-id="65:78648"
               >
                 Gain practical skills through courses designed and taught by
-                experienced professionals for real-world success skills through
-                courses.
+                experienced professionals for real-world success.
               </p>
             </div>
           </div>
@@ -120,8 +118,7 @@ export function WhyEduBoostSection() {
                 data-node-id="65:78660"
               >
                 Follow personalized learning paths that fit your schedule and
-                help you achieve your goals efficiently student life skills
-                through courses
+                help you achieve your goals efficiently.
               </p>
             </div>
           </div>
@@ -149,9 +146,8 @@ export function WhyEduBoostSection() {
                 className="font-['PP_Neue_Montreal',sans-serif] font-normal leading-[24px] relative shrink-0 text-[#bfbfbf] text-[16px] tracking-[-0.16px] w-full"
                 data-node-id="65:78672"
               >
-                Acquire relevant skills that enhance your career
-                opportunities, employability, and professional growth worldwide
-                skills through courses
+                Acquire relevant skills that enhance your career opportunities,
+                employability, and professional growth worldwide.
               </p>
             </div>
           </div>

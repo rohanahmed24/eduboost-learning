@@ -169,7 +169,7 @@ export default function FaqSection() {
   }, []);
 
   return (
-    <section className="w-full bg-white" data-node-id="65:79267">
+    <section id="faq" className="w-full bg-white scroll-mt-28" data-node-id="65:79267">
       <div className="relative mx-auto flex w-full min-w-0 max-w-[1440px] flex-col gap-12 px-[clamp(1rem,4vw,3.75rem)] py-[clamp(3rem,10vw,10rem)] md:gap-[60px] lg:items-end">
         <Reveal
           className="relative flex w-full shrink-0 flex-col items-start justify-between gap-8 lg:flex-row lg:items-start"
@@ -218,7 +218,7 @@ export default function FaqSection() {
                   },
                   {
                     variant: "muted",
-                    text: "enrollment, certifications, and how our platform",
+                    text: "enrollment, certifications, and how our platform works.",
                   },
                 ]}
               />

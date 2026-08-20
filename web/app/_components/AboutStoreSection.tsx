@@ -145,7 +145,7 @@ export function AboutStoreSection() {
                 segments={[
                   {
                     variant: "primary",
-                    text: "From a simple vision to empower learners, we've grown into a platform delivering expert-led courses, practical skills, and meaningful growth",
+                    text: "From a simple vision to empower learners, we've grown into a platform delivering expert-led courses, practical skills, and meaningful growth.",
                   },
                 ]}
               />

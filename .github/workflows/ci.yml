@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18, 20]
+        node-version: [20, 22]
 
     steps:
       - name: Checkout repository
@@ -26,13 +26,13 @@ jobs:
           cache-dependency-path: web/package-lock.json
 
       - name: Install dependencies
-        run: cd web && npm ci
+        run: cd web && npm ci --workspaces=false
 
       - name: Run lint checks
         run: cd web && npm run lint
 
       - name: Run TypeScript type checking
-        run: cd web && npx tsc --noEmit
+        run: cd web && npm run type-check
 
       - name: Build Next.js app
         run: cd web && npm run build
